@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/89a032c4e0.js" crossorigin="anonymous"></script>
+    <title>넌 내게 빠조 - 자기 소개 페이지</title>
+  </head>
+    <style>
+      * {
+        font-family: "Noto Serif KR", serif;
+      }
+
+      .mypost {
+        width: 95%;
+        max-width: 800px;
+        margin: 20px auto;
+        box-shadow: 1px 1px 8px 1px black;
+        border-radius: 20px;
+        padding: 40px;
+        background-color: rgb(223, 223, 223);
+      }
+      .mypost .form-control {
+        border-radius: 20px;
+        background-color: rgb(248, 248, 248);
+      }
+      .mypost label {
+        background-color: rgb(248, 248, 248);
+        font-size: 20px;
+        border-radius: 20px;
+        width: 100%;
+      }
+
+      .form-floating > .form-control:focus ~ label,
+      .form-floating > .form-control:not(:placeholder-shown) ~ label,
+      .form-floating > .form-select ~ label {
+        opacity: 0;
+      }
+      .form-floating > .form-control:focus ~ label,
+      .form-floating > .form-control:not(:placeholder-shown) ~ label,
+      .form-floating > .form-select ~ label {
+        opacity: 0;
+      }
+      .form-floating > .form-control:focus ~ label,
+      .form-floating > .form-control:not(:placeholder-shown) ~ label,
+      .form-floating > .form-select ~ label {
+        opacity: 0;
+      }
+      .mypost > button {
+        display: block;
+        margin: 30px auto 0px;
+        background-color: rgb(96, 96, 96);
+        border-radius: 15px;
+      }
+
+      .mycards {
+        width: 95%;
+        max-width: 500px;
+        margin: auto;
+        height: 400px;
+        overflow: auto;
+        padding-right: 10px;
+      }
+      .mycards::-webkit-scrollbar {
+        width: 10px; /* 스크롤바의 너비 */
+      }
+      .mycards::-webkit-scrollbar-thumb {
+        height: 30%; /* 스크롤바의 길이 */
+        background: #c4c6c8; /* 스크롤바의 색상 */
+        border-radius: 10px;
+      }
+      .mycards::-webkit-scrollbar-track {
+        background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
+      }
+
+      .mycards > .card {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        background-color: rgb(248, 248, 248);
+      }
+
+      .icon-btn {
+        float: right;
+      }
+      .icon-btn > a {
+        color: #000;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        show_comment();
+      });
+
+      function save_comment() {
+        let name = $("#name").val();
+        let password = $("#password").val();
+        let comment = $("#comment").val();
+
+        let formData = new FormData();
+        formData.append("name_give", name);
+        formData.append("password_give", password);
+        formData.append("comment_give", comment);
+
+        // 입력되었는지 확인해주는 기능
+        if (!$("#name").val()) return alert("작성자 이름을 입력해주세요");
+        if (!$("#password").val()) return alert("비밀번호를 입력해주세요");
+        if (!$("#comment").val()) return alert("응원 한마디를 입력해주세요");
+
+        fetch("/comment", { method: "POST", body: formData })
+          .then((res) => res.json())
+          .then((data) => {
+            alert(data["msg"]);
+            window.location.reload();
+          });
+      }
+      function show_comment() {
+        fetch("/comment")
+          .then((res) => res.json())
+          .then((data) => {
+            let rows = data["result"];
+            $("#comment-list").empty();
+            rows.forEach((a) => {
+              let name = a["name"];
+              let comment = a["comment"];
+              let id = a["id"];
+              let password = a["password"];
+
+              let temp_html = `<div class="card">
+                            <div class="card-body">
+                            <div class="icon-btn">
+                            <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
+                            <a href="" data-bs-toggle="modal" data-bs-target="#DelModal" onclick="delEvents('${id}')"><i class="fa-solid fa-trash-can"></i>
+                            </a>
+                            </div>
+                            <blockquote class="blockquote mb-0">
+                                <p>${comment}</p>
+                                <footer class="blockquote-footer">${name}</footer>
+                            </blockquote>
+                            </div>
+                        </div>`;
+              $("#comment-list").append(temp_html);
+            });
+          });
+      }
+      function delDocument(id) {
+      const password = $('.modal-pw').val()
+
+      if (!password) return alert('비밀번호를 입력해주세요')
+
+      let formData = new FormData();
+      formData.append('id', id);
+      formData.append('password', password);
+
+      fetch('/delDocument', { method: 'POST', body: formData })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data['result'] == 1) {
+            alert('삭제가 완료 되었습니다')
+            window.location.reload()
+          } else {
+            alert('잘못된 비밀번호입니다.')
+          }
+        });
+    }
+
+    function delEvents(id) {
+      $('#del-btn').attr('onclick', `delDocument('${id}')`)
+    }
+    </script>
+  </head>
+
+  <body>
+    <div>
+    <h1>넌 내게 빠조</h1>
+      <div>미니프로젝트 소개</div>
+    </div>
+    <div class="mypost">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="name" placeholder="url" />
+        <label for="floatingInput">닉네임</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          placeholder="url"
+        />
+        <label for="floatingInput">비밀번호 4자리</label>
+      </div>
+      <div class="form-floating">
+        <textarea
+          class="form-control"
+          placeholder="Leave a comment here"
+          id="comment"
+          style="height: 100px"
+        ></textarea>
+        <label for="floatingTextarea2">응원 한마디!</label>
+      </div>
+      <button onclick="save_comment()" type="button" class="btn btn-dark">
+        응원 등록하기
+      </button>
+    </div>
+    <div class="mycards" id="comment-list"></div>
+    <div class="modal fade" id="DelModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">게시물 삭제</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input class="modal-pw" type="password" placeholder="비밀번호를 입력해주세요">
+          </div>
+          <div class="modal-footer">
+            <button id="del-btn">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
