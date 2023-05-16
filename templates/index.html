@@ -11,43 +11,58 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script src="https://kit.fontawesome.com/89a032c4e0.js" crossorigin="anonymous"></script>
-    
+    <script
+      src="https://kit.fontawesome.com/89a032c4e0.js"
+      crossorigin="anonymous"
+    ></script>
+
     <title>넌 내게 빠조 - 자기 소개 페이지</title>
 
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/style.css" />
     <script defer src="../static/main.js"></script>
   </head>
-    
-  
+
   <body>
     <div>
-    <h1>넌 내게 빠조</h1>
+      <h1>넌 내게 빠조</h1>
       <div>미니프로젝트 소개</div>
     </div>
     <div class="mypost">
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="name" placeholder="url" />
-        <label for="floatingInput">닉네임</label>
-      </div>
-      <div class="form-floating mb-3">
-        <input
-          type="password"
-          class="form-control"
-          id="password"
-          maxlength="4"
-          placeholder="url"
-        />
-        <label for="floatingInput">비밀번호 4자리</label>
+      <div class="IdBox">
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" placeholder="url" />
+            <label for="floatingInput">닉네임</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              maxlength="4"
+              placeholder="url"
+            />
+            <label for="floatingInput">비밀번호 4자리</label>
+          </div>
       </div>
       <div class="form-floating">
         <textarea
@@ -68,10 +83,19 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">게시물 삭제</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
-            <input class="modal-pw" type="password" placeholder="비밀번호를 입력해주세요">
+            <input
+              class="modal-pw"
+              type="password"
+              placeholder="비밀번호를 입력해주세요"
+            />
           </div>
           <div class="modal-footer">
             <button id="del-btn">확인</button>
