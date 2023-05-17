@@ -84,6 +84,21 @@
   color: #000;
   cursor: pointer;
 }
+/* 삭제 모달창 input 크기 및 모양 조절 */
+.modal-pw {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* 삭제 모달창 확인 버튼 */
+.modal-footer > button {
+  width: 60px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+}
 /* -------------------jei----------->  */
 
 /* intro.js css */

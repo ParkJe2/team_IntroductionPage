@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>team project</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>team project</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -13,6 +12,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -42,6 +42,7 @@
       </span>
       <button id="speakBtn" class="speakBtn">💣︎ 위험! 누르지 마세요</button>
     </div>
+    <!-- -------------------------------------------------------- 혜진 -->
     <div class="mycards">
       <div class="row row-cols-1 row-cols-md-5 g-5" id="cards-box">
   
@@ -236,13 +237,15 @@
       </button>
     </div>
     <div class="mycards" id="comment-list"></div>
-
     <!-- 삭제 버튼 클리 시 팝업되는 모달창_jei---------------------------------------------------
     부트스트랩 빈 모달창 사용,  input과 button 추가하여 비밀번호 입력창 생성
     모달창 바깥 클릭 시 닫힘 -->
     <div class="modal fade" id="DelModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-sm">
-        <div class="modal-content">
+        <div
+          style="background-color: #fff; border-radius: 20px"
+          class="modalContent"
+        >
           <div class="modal-header">
             <h5 class="modal-title">게시물 삭제</h5>
             <button
