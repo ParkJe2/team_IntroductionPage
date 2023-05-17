@@ -88,3 +88,39 @@ function delEvents(id) {
 // attr - 엘리먼트의 속성 값을 가져오거나 변경할 수 있는 함수
 // del-btn 온클릭, delDocument의 아이디 값을 가져온다.
 // --------------------jei--------------------------------->
+
+// ------------------------------------------------ 혜진
+// 모달 클래스(모달 내용) 가져오기
+let modals = document.getElementsByClassName("modal");
+// 버튼 클래스(모달 띄우게 하는 카드) 가져오기
+let btns = document.getElementsByClassName("btn");
+let funcs = [];
+
+// 모달을 띄우는 클릭 이벤트를 정의한 함수
+function Modal(num) {
+  return function () {
+    // 해당 클래스의 내용을 클릭하면 Modal을 띄움
+    btns[num].onclick = function () {
+      modals[num].style.display = "block";
+      // console.log(num);
+    };
+  };
+}
+
+// 원하는 모달 수만큼 모달 함수를 호출해서 funcs 함수에 정의
+for (let i = 0; i < btns.length; i++) {
+  funcs[i] = Modal(i);
+}
+
+// 원하는 모달 수만큼 funcs 함수를 호출
+for (let j = 0; j < btns.length; j++) {
+  funcs[j]();
+}
+
+// 모달 영역 밖을 클릭하면 모달 닫기
+window.onclick = function (event) {
+  if (event.target.className == "modal") {
+    event.target.style.display = "none";
+  }
+};
+// ------------------------------------------------ 혜진
