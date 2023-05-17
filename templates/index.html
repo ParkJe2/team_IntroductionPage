@@ -9,15 +9,12 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
-
-
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+    <!-- 폰트어썸 CDN적용_제이 -->
   <script src="https://kit.fontawesome.com/89a032c4e0.js" crossorigin="anonymous"></script>
   <title>넌 내게 빠조 - 소개 페이지</title>
   <link rel="stylesheet" href="../static/style.css" />
@@ -221,7 +218,12 @@
     </button>
   </div>
   <div class="mycards" id="comment-list"></div>
-  <div class="modal fade" id="DelModal" tabindex="-1" aria-hidden="true">
+  <!-- <------------------------제이--------------------- -->
+  <!-- 삭제 버튼 클리 시 팝업되는 모달창
+    부트스트랩 빈 모달창 사용,  input과 button 추가하여 비밀번호 입력창 생성
+    모달창 바깥 클릭 시 닫힘 -->
+  <div class="test">
+    <div class="modal fade" id="DelModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
@@ -237,6 +239,8 @@
       </div>
     </div>
   </div>
+</div>
+  <!-- -------------------------제이--------------------------- -->
   <footer id="quote" class="quote">
     <span></span>
     <span></span>
