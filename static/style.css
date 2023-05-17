@@ -5,6 +5,7 @@
   font-family: "Noto Serif KR", serif;
 }
 
+/*-------------------------------- 김영빈 CSS--------------------------------------------- */
 .mypost {
   width: 95%;
   max-width: 800px;
@@ -23,6 +24,17 @@
   font-size: 20px;
   border-radius: 20px;
   width: 100%;
+}
+.IdBox {
+  display: flex;
+}
+.mb-3 {
+  margin: 10px auto;
+  width: 350px;
+}
+
+textarea.form-control {
+  min-height: calc(1.5em + (7.75rem + 2px));
 }
 
 .form-floating > .form-control:focus ~ label,
@@ -73,6 +85,12 @@
   border-radius: 20px;
   background-color: rgb(248, 248, 248);
 }
+.btn-dark {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+  font-size: 20px;
+}
 
 .icon-btn {
   float: right;
@@ -81,6 +99,8 @@
   color: #000;
   cursor: pointer;
 }
+
+/* ---------------------------------------------------------------------- 김영빈  ---------- */
 
 /* intro.js css */
 .header {
@@ -219,3 +239,10 @@
   font-weight: bolder;
 }
 /* ---------------------------------------------- 혜진 */
+.modal {
+  z-index: 1050 !important;
+}
+
+.modal-backdrop {
+  z-index: 1040 !important;
+}

@@ -203,24 +203,42 @@
     </div>
   </div>
   <!-- ------------------------------------------------------------ 혜진 -->
+  <!--------------------- 김영빈 조회 생성 구역 --------------------------------------------->
   <div class="mypost">
-    <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="name" placeholder="url" />
-      <label for="floatingInput">닉네임</label>
-    </div>
-    <div class="form-floating mb-3">
-      <input type="password" class="form-control" id="password" maxlength="4" placeholder="url" />
-      <label for="floatingInput">비밀번호 4자리</label>
+    <div class="IdBox">
+
+      <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="name" placeholder="url" />
+          <label for="floatingInput">닉네임</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            maxlength="4"
+            placeholder="url"
+          />
+          <label for="floatingInput">비밀번호 4자리</label>
+        </div>
     </div>
     <div class="form-floating">
-      <textarea class="form-control" placeholder="Leave a comment here" id="comment" style="height: 100px"></textarea>
-      <label for="floatingTextarea2">응원 한마디!</label>
+      <textarea
+        class="form-control"
+        placeholder="Leave a comment here"
+        id="comment"
+        style="height: 100px"
+      ></textarea>
+      <label for="floatingTextarea2">응원 한마디!</label> 
     </div>
-    <button onclick="save_comment()" type="button" class="btn btn-dark">
+    <button onclick="save_comment()" type="button" class="btn-dark">
       응원 등록하기
     </button>
   </div>
+  <!-- 가져온 닉네임, 응원 한마디 보여주는 comment-list -->
   <div class="mycards" id="comment-list"></div>
+<!-- --------------------------------------------------김영빈 ----------------------------------- -->
   <div class="modal fade" id="DelModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
