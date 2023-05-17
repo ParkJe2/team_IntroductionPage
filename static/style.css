@@ -1,0 +1,221 @@
+/* 폰트 적용_J */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+* {
+  font-family: "Noto Serif KR", serif;
+}
+
+.mypost {
+  width: 95%;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 1px 1px 8px 1px black;
+  border-radius: 20px;
+  padding: 40px;
+  background-color: rgb(223, 223, 223);
+}
+.mypost .form-control {
+  border-radius: 20px;
+  background-color: rgb(248, 248, 248);
+}
+.mypost label {
+  background-color: rgb(248, 248, 248);
+  font-size: 20px;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+  opacity: 0;
+}
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+  opacity: 0;
+}
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+  opacity: 0;
+}
+.mypost > button {
+  display: block;
+  margin: 30px auto 0px;
+  background-color: rgb(96, 96, 96);
+  border-radius: 15px;
+}
+
+.mycards {
+  width: 95%;
+  max-width: 500px;
+  margin: auto;
+  height: 400px;
+  overflow: auto;
+  padding-right: 10px;
+}
+.mycards::-webkit-scrollbar {
+  width: 10px; /* 스크롤바의 너비 */
+}
+.mycards::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: #c4c6c8; /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+.mycards::-webkit-scrollbar-track {
+  background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
+}
+
+.mycards > .card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background-color: rgb(248, 248, 248);
+}
+
+.icon-btn {
+  float: right;
+}
+.icon-btn > a {
+  color: #000;
+  cursor: pointer;
+}
+
+/* intro.js css */
+.header {
+  background-color: powderblue;
+}
+.speakBtn {
+  background-color: transparent;
+  border: 1px solid gainsboro;
+  border-radius: 30px;
+  padding: 3px 10px;
+  color: tomato;
+}
+
+/* footer.js css  */
+.quote {
+  color: gray;
+  font-weight: bold;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote span:first-child {
+  padding-bottom: 5px;
+}
+
+/* ---------------------------------------------- 혜진 */
+/* 타이틀 */
+.myback {
+  background-color: rgba(235, 235, 235, 0.618);
+
+  height: 200px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 조 이름 */
+.title {
+  font-size: 60px;
+  font-weight: bolder;
+
+  margin-right: 250px;
+}
+
+/* 미니 프로젝트 소개 */
+.desc {
+  font-size: 30px;
+}
+
+/* 카드 전체 */
+.mycards {
+  margin: 30px auto 0px auto;
+  width: 95%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+/* 카드 이미지 */
+.card-img-top {
+  border-radius: 70%;
+  overflow: hidden;
+  filter: drop-shadow(10px 10px 10px gray);
+}
+
+/* 카드 이름 */
+.card-title {
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+/* 모달 배경 */
+.modal {
+  display: none; /* 처음에 모달 안보이게 */
+  position: fixed;
+  z-index: 1; /* 우선순위 */
+
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* overflow: auto; 스크롤 가능  */
+
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-top: 0;
+}
+
+/* 모달창 */
+.modal-content {
+  width: 600px;
+  height: 300px;
+
+  background-color: hsl(155, 37%, 76%);
+  box-shadow: 0 2px 7px rgba(63, 63, 63, 0.3);
+
+  margin: 10% auto;
+
+  border-radius: 40px 40px 40px 40px;
+}
+
+/* 모달창 이미지와 내용 */
+.img-content {
+  display: flex;
+}
+
+/* 모달창 이미지 */
+.img {
+  width: 230px;
+  height: 230px;
+  border-radius: 70%;
+  margin-left: 30px;
+  margin-top: 35px;
+}
+
+/* 모달창 내용 */
+.content {
+  display: inline;
+  text-align: left;
+  font-size: larger;
+  margin-left: 40px;
+  margin-top: 55px;
+}
+
+/* 모달창 내용 색 변경 */
+.gray-text {
+  color: gray;
+}
+
+/* 모달창 이름 */
+.name-link {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+/* ---------------------------------------------- 혜진 */
