@@ -81,3 +81,30 @@
   color: #000;
   cursor: pointer;
 }
+
+/* intro.js css */
+.header {
+  background-color: powderblue;
+}
+.speakBtn {
+  background-color: transparent;
+  border: 1px solid gainsboro;
+  border-radius: 30px;
+  padding: 3px 10px;
+  color: tomato;
+}
+
+/* footer.js css  */
+.quote {
+  color: gray;
+  font-weight: bold;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote span:first-child {
+  padding-bottom: 5px;
+}
