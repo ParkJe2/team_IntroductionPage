@@ -24,6 +24,7 @@ function save_comment() {
       window.location.reload();
     });
 }
+
 function show_comment() {
   fetch("/comment")
     .then((res) => res.json())
