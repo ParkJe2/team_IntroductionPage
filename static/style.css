@@ -166,7 +166,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto; /* 스크롤 가능 */
+  /* overflow: auto; 스크롤 가능  */
 
   background-color: rgba(0, 0, 0, 0.4);
   margin-top: 0;
