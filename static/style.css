@@ -99,12 +99,11 @@
 }
 
 .header p {
-  width: 80%;
-  font-size: 18px;
-  line-height: 30px;
-  margin-top: 1rem;
-  font-weight: 500;
-  color: #5c5c5c;
+  position: absolute;
+  top: 40px;
+  left: 450px;
+  right: 70px;
+  text-align: justify;
 }
 
 .header h1 {
@@ -117,19 +116,11 @@
   letter-spacing: -6px;
 }
 
-.header span {
-  position: absolute;
-  top: 40px;
-  left: 450px;
-  right: 70px;
-  text-align: justify;
-}
-
 .speakBtn {
   position: absolute;
   width: 130px;
-  height: 25px;
-  right: 70px;
+  height: 22px;
+  right: 570px;
   color: white;
   font-size: 10px;
   font-weight: bold;
@@ -137,7 +128,7 @@
   background-color: rgb(255, 73, 73);
   border: none;
   border-radius: 30px;
-  margin: 10px 0px;
+  margin: 110px 0px;
   padding: 3px 5px;
   transition: 0.3s;
 }
