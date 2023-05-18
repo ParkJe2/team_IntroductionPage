@@ -79,14 +79,41 @@
   background-color: rgb(248, 248, 248);
 }
 
+/* <-------------제이------------ */
+/* 아이콘 버튼 우측 정렬 */
 .icon-btn {
   float: right;
 }
 
-.icon-btn>a {
+/* 아이콘 색상 변경 및 커서 포인터 지정 */
+.icon-btn > a {
   color: #000;
   cursor: pointer;
 }
+
+/* 삭제 모달 크기, 배경색 설정 */
+.modal-header,
+.modal-body,
+.modal-footer {
+  width: 600px;
+  background-color: #fff;
+}
+
+/* 삭제 모달 비밀번호 input 크기, 테두리 모양, 안쪽 여백 설정 */
+.modal-pw {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+}
+/* 삭제 모달 확인 버튼 크기, 안쪽 여백, 모양, 버튼 및 폰트 색상 설정 */
+.modal-footer > button {
+  width: 60px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+}
+/* -------------제이------------> */
 
 /* intro.js css */
 .header {
@@ -227,6 +254,79 @@
 }
 
 /* ---------------------------------------------- 혜진 */
+
+/* 우리 */
+/* .card-img-top{
+  
+} */
+.header {
+  text-align: left;
+  height: 285px;
+}
+h1 {
+  font-weight: 800;
+  padding-top: 1.5rem;
+}
+.header_m {
+  margin: 0 auto;
+  width: 1150px;
+  padding-left: 1.2rem;
+}
+.header p {
+  width: 90%;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #5c5c5c;
+}
+.speakBtn {
+  background-color: white;
+}
+
+#cards-box {
+  position: relative;
+}
+.like {
+  position: absolute;
+  text-align: right;
+  left: -1rem;
+}
+.like1 {
+  position: absolute;
+  text-align: right;
+  left: 220px;
+}
+.like2 {
+  position: absolute;
+  text-align: right;
+  left: 485px;
+}
+.like3 {
+  position: absolute;
+  text-align: right;
+  right: 265px;
+}
+.like4 {
+  position: absolute;
+  text-align: right;
+  right: 0;
+}
+
+#result,
+#result1,
+#result2,
+#result3,
+#result4 {
+  text-align: right;
+  margin: -10px -5px 0 0;
+  font-weight: 600;
+}
+
+.heartBtn {
+  background-color: transparent;
+  border: none;
+}
 
 .modal {
   z-index: 1050 !important;
