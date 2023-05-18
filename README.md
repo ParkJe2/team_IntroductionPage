@@ -1,4 +1,4 @@
-# 미니프로젝트 "팀 소개 페이지" 
+# 넌 내게 빠조(팀)의 "팀 소개 페이지" 미니 프로젝트
 ## 🖥️ 프로젝트 소개
 내일배움캠프로 만난 5인이 자기자신을 멋지게 소개하고, 서로를 알아가며 한 팀이 되어가는 과정을 그린 팀 소개 페이지입니다.
 <br>
@@ -19,7 +19,7 @@
 <details>
   <summary><h3> 🎨 와이어 프레임</h3></summary>
 <div markdown="1">       
-![ourTeamPage_와이어 프레임](https://github.com/jei1211/team_mini/assets/120562771/30065040-9048-456e-9158-d36f38f70138)
+![ourTeamPage_와이어 프레임](https://github.com/jei1211/team_mini/assets/120562771/30065040-9048-456e-9158-d36f38f70138.png)
 </div>
 </details>
 
