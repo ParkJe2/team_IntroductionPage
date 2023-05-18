@@ -101,7 +101,7 @@ for (let i = 0; i < btns.length; i++) {
     funcs[i] = Modal(i);
 }
 
-// 원하는 모달 수만큼 funcs 함수를 호출
+// funcs 배열에서 해당 인덱스 j의 함수 호출
 for (let j = 0; j < btns.length; j++) {
     funcs[j]();
 }
