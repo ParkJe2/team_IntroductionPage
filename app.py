@@ -58,6 +58,21 @@ def delDocument():
         db.data.delete_one({'id':request.form['id']})
         return jsonify({'result':1})
     # 각 데이터별 고유 아이디와 유저의 비밀번호를 가져와 일치여부 확인 후 일치할 경우 1, 일치하지 않을 경우 0
+
+    # 데이터 수정 기능 POST ++추가
+@app.route("/editDocument", methods=["POST"])
+def editDocument():
+    # find_one 한 개 찾기
+    find = db.data.find_one({'id': request.form['id'], 'password': request.form['password']})
+
+    if find == None:
+        return jsonify({'result':0})
+    else:
+        # update_one 변경하기
+        db.data.update_one({'id':request.form['id']},{"$set": {"name":request.form['name'], "comment":request.form['comment']}})
+        return jsonify({'result':1})
+    # 각 데이터별 고유 아이디와 유저의 비밀번호를 가져와 일치여부 확인 후 일치할 경우 1, 일치하지 않을 경우 0
+    
 # --------------제이--------------->
 
 if __name__ == '__main__':
