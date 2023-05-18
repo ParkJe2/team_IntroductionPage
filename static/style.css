@@ -1,10 +1,3 @@
-/* 폰트 적용 */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
-
-* {
-  font-family: "Noto Serif KR", serif;
-}
-
 .mypost {
   width: 95%;
   max-width: 800px;
@@ -14,10 +7,12 @@
   padding: 40px;
   background-color: rgb(223, 223, 223);
 }
+
 .mypost .form-control {
   border-radius: 20px;
   background-color: rgb(248, 248, 248);
 }
+
 .mypost label {
   background-color: rgb(248, 248, 248);
   font-size: 20px;
@@ -25,22 +20,25 @@
   width: 100%;
 }
 
-.form-floating > .form-control:focus ~ label,
-.form-floating > .form-control:not(:placeholder-shown) ~ label,
-.form-floating > .form-select ~ label {
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label,
+.form-floating>.form-select~label {
   opacity: 0;
 }
-.form-floating > .form-control:focus ~ label,
-.form-floating > .form-control:not(:placeholder-shown) ~ label,
-.form-floating > .form-select ~ label {
+
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label,
+.form-floating>.form-select~label {
   opacity: 0;
 }
-.form-floating > .form-control:focus ~ label,
-.form-floating > .form-control:not(:placeholder-shown) ~ label,
-.form-floating > .form-select ~ label {
+
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label,
+.form-floating>.form-select~label {
   opacity: 0;
 }
-.mypost > button {
+
+.mypost>button {
   display: block;
   margin: 30px auto 0px;
   background-color: rgb(96, 96, 96);
@@ -55,19 +53,26 @@
   overflow: auto;
   padding-right: 10px;
 }
+
 .mycards::-webkit-scrollbar {
-  width: 10px; /* 스크롤바의 너비 */
-}
-.mycards::-webkit-scrollbar-thumb {
-  height: 30%; /* 스크롤바의 길이 */
-  background: #c4c6c8; /* 스크롤바의 색상 */
-  border-radius: 10px;
-}
-.mycards::-webkit-scrollbar-track {
-  background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
+  width: 10px;
+  /* 스크롤바의 너비 */
 }
 
-.mycards > .card {
+.mycards::-webkit-scrollbar-thumb {
+  height: 30%;
+  /* 스크롤바의 길이 */
+  background: #c4c6c8;
+  /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+
+.mycards::-webkit-scrollbar-track {
+  background: rgba(33, 122, 244, 0.1);
+  /*스크롤바 뒷 배경 색상*/
+}
+
+.mycards>.card {
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 20px;
@@ -79,6 +84,7 @@
 .icon-btn {
   float: right;
 }
+
 /* 아이콘 색상 변경 및 커서 포인터 지정 */
 .icon-btn > a {
   color: #000;
@@ -113,6 +119,7 @@
 .header {
   background-color: powderblue;
 }
+
 .speakBtn {
   background-color: transparent;
   border: 1px solid gainsboro;
@@ -193,7 +200,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  /* overflow: auto; 스크롤 가능  */
+  overflow: auto; /* 스크롤 가능 */
 
   background-color: rgba(0, 0, 0, 0.4);
   margin-top: 0;
@@ -207,7 +214,7 @@
   background-color: hsl(155, 37%, 76%);
   box-shadow: 0 2px 7px rgba(63, 63, 63, 0.3);
 
-  margin: 10% auto;
+  margin: 15% auto;
 
   border-radius: 40px 40px 40px 40px;
 }
@@ -245,6 +252,7 @@
   font-size: xx-large;
   font-weight: bolder;
 }
+
 /* ---------------------------------------------- 혜진 */
 
 /* 우리 */

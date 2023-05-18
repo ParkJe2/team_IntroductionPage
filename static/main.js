@@ -97,28 +97,27 @@ let modals = document.getElementsByClassName("modal");
 let btns = document.getElementsByClassName("btn");
 let funcs = [];
 
-// 모달을 띄우는 클릭 이벤트를 정의한 함수
+// Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
 function Modal(num) {
-  return function () {
-    // 해당 클래스의 내용을 클릭하면 Modal을 띄움
-    btns[num].onclick = function () {
-      modals[num].style.display = "block";
-      // console.log(num);
+  return function() {
+    // 해당 btns 클래스의 내용을 클릭하면 Modal을 띄움
+    btns[num].onclick =  function() {
+        modals[num].style.display = "block";
     };
   };
 }
 
-// 원하는 모달 수만큼 모달 함수를 호출해서 funcs 함수에 정의
+// 원하는 모달 수만큼 모달 함수를 호출해서 funcs 함수(배열)에 정의
 for (let i = 0; i < btns.length; i++) {
   funcs[i] = Modal(i);
 }
 
-// 원하는 모달 수만큼 funcs 함수를 호출
+// funcs 배열에서 해당 인덱스 j의 함수 호출
 for (let j = 0; j < btns.length; j++) {
   funcs[j]();
 }
 
-// 모달 영역 밖을 클릭하면 모달 닫기
+// window 객체를 클릭하면 모달 닫기
 window.onclick = function (event) {
   if (event.target.className == "modal") {
     event.target.style.display = "none";
