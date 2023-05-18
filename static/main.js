@@ -125,3 +125,35 @@ window.onclick = function (event) {
   }
 };
 // ------------------------------------------------ 혜진
+
+// 우리
+function addLike() {
+  countA = countA + 1;
+  document.querySelector("#result").innerHTML = +countA;
+}
+var countA = 0;
+
+function addLike1() {
+  countB = countB + 1;
+  document.querySelector("#result1").innerHTML = +countB;
+}
+var countB = 0;
+
+function addLike2() {
+  countC = countC + 1;
+  document.querySelector("#result2").innerHTML = +countC;
+}
+var countC = 0;
+
+function addLike3() {
+  countD = countD + 1;
+  document.querySelector("#result3").innerHTML = +countD;
+}
+var countD = 0;
+
+function addLike4() {
+  countE = countE + 1;
+  document.querySelector("#result4").innerHTML = +countE;
+}
+var countE = 0;
+// 우리끝

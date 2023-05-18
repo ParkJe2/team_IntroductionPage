@@ -247,7 +247,79 @@
 }
 /* ---------------------------------------------- 혜진 */
 
-/* 모달 우선순위 정렬 */
+/* 우리 */
+/* .card-img-top{
+  
+} */
+.header {
+  text-align: left;
+  height: 285px;
+}
+h1 {
+  font-weight: 800;
+  padding-top: 1.5rem;
+}
+.header_m {
+  margin: 0 auto;
+  width: 1150px;
+  padding-left: 1.2rem;
+}
+.header p {
+  width: 90%;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #5c5c5c;
+}
+.speakBtn {
+  background-color: white;
+}
+
+#cards-box {
+  position: relative;
+}
+.like {
+  position: absolute;
+  text-align: right;
+  left: -1rem;
+}
+.like1 {
+  position: absolute;
+  text-align: right;
+  left: 220px;
+}
+.like2 {
+  position: absolute;
+  text-align: right;
+  left: 485px;
+}
+.like3 {
+  position: absolute;
+  text-align: right;
+  right: 265px;
+}
+.like4 {
+  position: absolute;
+  text-align: right;
+  right: 0;
+}
+
+#result,
+#result1,
+#result2,
+#result3,
+#result4 {
+  text-align: right;
+  margin: -10px -5px 0 0;
+  font-weight: 600;
+}
+
+.heartBtn {
+  background-color: transparent;
+  border: none;
+}
+
 .modal {
   z-index: 1050 !important;
 }
