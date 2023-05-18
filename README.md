@@ -19,7 +19,7 @@
 <details>
   <summary><h3> 🎨 와이어 프레임</h3></summary>
 <div markdown="1">       
-![ourTeamPage_와이어 프레임](https://github.com/jei1211/team_mini/assets/120562771/30065040-9048-456e-9158-d36f38f70138.png)
+![ourTeamPage_와이어 프레임](https://github.com/jei1211/team_mini/assets/120562771/30065040-9048-456e-9158-d36f38f70138?raw=true)
 </div>
 </details>
 
