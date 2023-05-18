@@ -1,17 +1,22 @@
+// -----------------------------------김영빈---------------------------------------------------
 $(document).ready(function () {
   show_comment();
 });
 
+// 1. post 하는 기능
 function save_comment() {
+  // name, password, comment 저장
   let name = $("#name").val();
   let password = $("#password").val();
   let comment = $("#comment").val();
 
+  // formData에 값을 태워서 fetch로 /comment로 날려줌
   let formData = new FormData();
   formData.append("name_give", name);
   formData.append("password_give", password);
   formData.append("comment_give", comment);
 
+  //  빈칸이 있으면, 있다고 알려주는 기능
   // 입력되었는지 확인해주는 기능
   // <-----------빈 값 검사_제이-----------------
   // 입력 폼에 값을 입력하지 않았을 경우 알럿 노출
@@ -23,40 +28,50 @@ function save_comment() {
   fetch("/comment", { method: "POST", body: formData })
     .then((res) => res.json())
     .then((data) => {
+      // 메시지 띄워줌
       alert(data["msg"]);
       window.location.reload();
     });
 }
 
+// 4. get 하는 기능
 function show_comment() {
   fetch("/comment")
     .then((res) => res.json())
     .then((data) => {
+      // rows안에 result값 담아줌
       let rows = data["result"];
       $("#comment-list").empty();
+      // name, comment, 글쓴이 고유id, 입력한 password를 가져옴
       rows.forEach((a) => {
         let name = a["name"];
         let comment = a["comment"];
         let id = a["id"];
         let password = a["password"];
 
+        //가져온 응원 한마디와 닉네임을 보여줌
         // <-----------// 삭제 아이콘 추가(폰트어썸), 삭제 버튼 클릭 시 비밀번호 입력 모달창 노출_제이--------------->
         let temp_html = `<div class="card">
-                      <div class="card-body">
-                      <div class="icon-btn">
-                      <a href="" data-bs-toggle="modal" data-bs-target="#DelModal" onclick="delEvents('${id}')"><i class="fa-solid fa-trash-can"></i>
-                      </a>
-                      </div>
-                      <blockquote class="blockquote mb-0">
-                          <p>${comment}</p>
-                          <footer class="blockquote-footer">${name}</footer>
-                      </blockquote>
-                      </div>
-                  </div>`;
+                        <div class="card-body">
+                        <div class="icon-btn">
+                        <a href="" data-bs-toggle="modal" data-bs-target="#DelModal" onclick="delEvents('${id}')"><i class="fa-solid fa-trash-can"></i>
+                        </a>
+                        </div>
+                        <blockquote class="blockquote mb-0">
+                            <p>${comment}</p>
+                            <footer class="blockquote-footer">${name}</footer>
+                        </blockquote>
+                        </div>
+                    </div>`;
+        //comment-list에 보내줌
+
         $("#comment-list").append(temp_html);
       });
     });
 }
+
+// ---------------------------------------------------------------------김영빈--------------------------
+
 // <------------------제아-----------------------
 function delDocument(id) {
   const password = $(".modal-pw").val();
