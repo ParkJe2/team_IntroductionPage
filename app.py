@@ -5,10 +5,9 @@ from flask import Flask, render_template, request, jsonify
 app = Flask(__name__)
 
 from pymongo import MongoClient
-import certifi 
 
 
-client = MongoClient('mongodb+srv://four:four123@cluster0.wbrtbvg.mongodb.net/?retryWrites=true&w=majority', tlsCAFile=certifi.where())
+client = MongoClient('mongodb+srv://four:four123@cluster0.wbrtbvg.mongodb.net/?retryWrites=true&w=majority')
 db = client.four
 
 @app.route('/')
