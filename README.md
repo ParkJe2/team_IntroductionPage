@@ -17,7 +17,7 @@
 - HTML, JavaScript, CSS, Python(flask), mongoDB
 
 ## 🎬 데모 영상
-* <>
+* <https://youtu.be/tNZgkktEcWU>
 
 ## 📌 트러블 슈팅
 #### 깃허브 협업 이슈
