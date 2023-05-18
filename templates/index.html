@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>team project</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/89a032c4e0.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>넌 내게 빠조 - 소개 페이지</title>
+    <link rel="stylesheet" href="../static/style.css" />
+    <script defer src="../static/main.js"></script>
+    <script defer src="../static/intro.js"></script>
+    <script defer src="../static/footer.js"></script>
+  </head>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/89a032c4e0.js" crossorigin="anonymous"></script>
-  <title>넌 내게 빠조 - 소개 페이지</title>
-  <link rel="stylesheet" href="../static/style.css" />
-  <script defer src="../static/main.js"></script>
-  <script defer src="../static/intro.js"></script>
-  <script defer src="../static/footer.js"></script>
-</head>
-
-<body>
-  <div class="header">
-    <h1>넌 내게 빠조</h1>
-    <span id="intro">
-      "안녕, 우리 팀 이름은 '넌 내게 빠조'야. 이름 그대로 코딩에 빠져있어.
-      우리가 작성한 코드를 보면 너희도 분명 빠져들게 될거야. 이 페이지는
-      우리의 끊임없는 도전과 동료들과의 적극적인 소통, 그리고 함께 성장하는
-      '넌 내게 빠조'팀의 포부를 담고 있어. 이곳을 재미있게 둘러봤으면 좋겠어!"
-    </span>
-    <button id="speakBtn" class="speakBtn">💣︎ 위험! 누르지 마세요</button>
-  </div>
+  <body>
+    <div class="header">
+      <div class="header_m">
+        <h1>넌 내게 빠조</h1>
+          <p id="intro">
+            안녕, 우리 팀 이름은 '넌 내게 빠조'야! 이름 그대로 코딩에 빠져있어.</br>
+            우리가 작성한 코드를 보면 너희도 분명 빠져들게 될거야.</br> 이 페이지는
+            우리의 끊임없는 도전과 동료들과의 적극적인 소통, 그리고 함께 성장하는
+            '넌 내게 빠조'팀의 포부를 담고 있어. </br>이 곳을 재미있게 둘러봤으면 좋겠어!
+          </p>
+          <button id="speakBtn" class="speakBtn">💣 위험! 누르지 마세요</button>
+      </div>
+    </div>
+  
   <!-- -------------------------------------------------------- 혜진 -->
   <div class="mycards">
     <div class="row row-cols-1 row-cols-md-5 g-5" id="cards-box">
@@ -45,8 +56,13 @@
       <div class="btn">
         <img src="../static/img/jsh.png" class="card-img-top">
         <p>
-        <h5 class="card-title">지설희</h5>
-      </div>
+          <h5 class="card-title">지설희</h5>
+        </div>
+        <div class="like">
+          <button class="heartBtn" onclick="addLike()">
+              💖</button>
+          <div id='result'>0</div>
+        </div>
 
       <!-- 첫 번째 Modal 클래스 -->
       <div class="modal">
@@ -78,6 +94,11 @@
         <img src="../static/img/pji.png" class="card-img-top">
         <p>
         <h5 class="card-title">박제이</h5>
+      </div>
+      <div class="like1">
+        <button class="heartBtn" onclick="addLike1()">
+            💖</button>
+        <div id='result1'>0</div>
       </div>
 
       <!-- 두 번째 Modal 클래스-->
@@ -111,6 +132,11 @@
         <p>
         <h5 class="card-title">장혜진</h5>
       </div>
+      <div class="like2">
+        <button class="heartBtn" onclick="addLike2()">
+            💖</button>
+        <div id='result2'>0</div>
+      </div>
 
       <!-- 세 번째 Modal 클래스-->
       <div class="modal">
@@ -128,7 +154,7 @@
               </div>
               </br>
               <p><span class="gray-text">NICKNAME</span> &nbsp;마늘
-                <br><span class="gray-text">LOVES</span> &nbsp;재밌는 거
+                <br><span class="gray-text">LOVES</span> &nbsp;재밌는 거 
                 <br><span class="gray-text">HATES</span> &nbsp;벌레
                 <br><span class="gray-text">COMMENT</span> &nbsp;功夫不负有心人
               </p>
@@ -142,6 +168,11 @@
         <img src="../static/img/kyb.png" class="card-img-top">
         <p>
         <h5 class="card-title">김영빈</h5>
+      </div>
+      <div class="like3">
+        <button class="heartBtn" onclick="addLike3()">
+            💖</button>
+        <div id='result3'>0</div>
       </div>
 
       <!-- 네 번째 Modal 클래스-->
@@ -174,6 +205,11 @@
         <img src="../static/img/kwr.png" class="card-img-top">
         <p>
         <h5 class="card-title">김우리</h5>
+      </div>
+      <div class="like4">
+        <button class="heartBtn" onclick="addLike4()">
+            💖</button>
+        <div id='result4'>0</div>
       </div>
 
       <!-- 다섯 번째 Modal 클래스-->
@@ -232,6 +268,7 @@
       ></textarea>
       <label for="floatingTextarea2">응원 한마디!</label> 
     </div>
+
     <button onclick="save_comment()" type="button" class="btn-dark">
       응원 등록하기
     </button>
@@ -239,7 +276,12 @@
   <!-- 가져온 닉네임, 응원 한마디 보여주는 comment-list -->
   <div class="mycardss" id="comment-list"></div>
 <!-- --------------------------------------------------김영빈 ----------------------------------- -->
-  <div class="modal fade" id="DelModal" tabindex="-1" aria-hidden="true">
+  <!-- <------------------------제이--------------------- -->
+  <!-- 삭제 버튼 클리 시 팝업되는 모달창
+    부트스트랩 빈 모달창 사용,  input과 button 추가하여 비밀번호 입력창 생성
+    모달창 바깥 클릭 시 닫힘 -->
+  <div class="test">
+    <div class="modal fade" id="DelModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
@@ -255,6 +297,8 @@
       </div>
     </div>
   </div>
+</div>
+  <!-- -------------------------제이--------------------------- -->
   <footer id="quote" class="quote">
     <span></span>
     <span></span>

@@ -14,10 +14,12 @@
   padding: 40px;
   background-color: rgb(223, 223, 223);
 }
+
 .mypost .form-control {
   border-radius: 20px;
   background-color: rgb(248, 248, 248);
 }
+
 .mypost label {
   background-color: rgb(248, 248, 248);
   font-size: 20px;
@@ -36,22 +38,25 @@ textarea.form-control {
   min-height: calc(1.5em + (7.75rem + 2px));
 }
 
-.form-floating > .form-control:focus ~ label,
-.form-floating > .form-control:not(:placeholder-shown) ~ label,
-.form-floating > .form-select ~ label {
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label,
+.form-floating>.form-select~label {
   opacity: 0;
 }
-.form-floating > .form-control:focus ~ label,
-.form-floating > .form-control:not(:placeholder-shown) ~ label,
-.form-floating > .form-select ~ label {
+
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label,
+.form-floating>.form-select~label {
   opacity: 0;
 }
-.form-floating > .form-control:focus ~ label,
-.form-floating > .form-control:not(:placeholder-shown) ~ label,
-.form-floating > .form-select ~ label {
+
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label,
+.form-floating>.form-select~label {
   opacity: 0;
 }
-.mypost > button {
+
+.mypost>button {
   display: block;
   margin: 30px auto 0px;
   background-color: rgb(96, 96, 96);
@@ -67,6 +72,7 @@ textarea.form-control {
   padding-right: 10px;
   margin: 50px auto 50px auto;
 }
+
 .mycardss::-webkit-scrollbar {
   width: 10px; /* 스크롤바의 너비 */
 }
@@ -92,9 +98,13 @@ textarea.form-control {
   font-size: 20px;
 }
 
+/* <-------------제이------------ */
+/* 아이콘 버튼 우측 정렬 */
 .icon-btn {
   float: right;
 }
+
+/* 아이콘 색상 변경 및 커서 포인터 지정 */
 .icon-btn > a {
   color: #000;
   cursor: pointer;
@@ -102,16 +112,96 @@ textarea.form-control {
 
 /* ---------------------------------------------------------------------- 김영빈  ---------- */
 
+/* <-------------제이------------ */
+/* 아이콘 버튼 우측 정렬 */
+.icon-btn {
+  float: right;
+}
+/* 아이콘 색상 변경 및 커서 포인터 지정 */
+.icon-btn > a {
+  color: #000;
+  cursor: pointer;
+}
+
+/* 삭제 모달 크기, 배경색 설정 */
+.modal-header,
+.modal-body,
+.modal-footer {
+  width: 600px;
+  background-color: #fff;
+}
+
+/* 삭제 모달 비밀번호 input 크기, 테두리 모양, 안쪽 여백 설정 */
+.modal-pw {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+}
+/* 삭제 모달 확인 버튼 크기, 안쪽 여백, 모양, 버튼 및 폰트 색상 설정 */
+.modal-footer > button {
+  width: 60px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+}
+/* -------------제이------------> */
+
 /* intro.js css */
 .header {
-  background-color: powderblue;
+  position: relative;
+  width: 100%;
+  padding-bottom: 150px;
+
+  text-align: left;
+  height: 285px;
 }
+
+.header_m {
+  margin: 0 auto;
+  width: 1150px;
+  padding-left: 1.2rem;
+}
+
+.header p {
+  position: absolute;
+  top: 40px;
+  left: 450px;
+  right: 70px;
+  text-align: justify;
+}
+
+.header h1 {
+  position: absolute;
+  left: 60px;
+  top: 40px;
+  font-size: 64px;
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: -6px;
+}
+
 .speakBtn {
-  background-color: transparent;
-  border: 1px solid gainsboro;
+  position: absolute;
+  width: 130px;
+  height: 22px;
+  right: 570px;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+
+  background-color: rgb(255, 73, 73);
+  border: none;
   border-radius: 30px;
-  padding: 3px 10px;
-  color: tomato;
+  margin: 110px 0px;
+  padding: 3px 5px;
+  transition: 0.3s;
+}
+
+.speakBtn:hover {
+  background-color: rgba(255, 73, 73);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(255, 73, 73, 0.6);
 }
 
 /* footer.js css  */
@@ -126,6 +216,7 @@ textarea.form-control {
 }
 
 .quote span:first-child {
+  padding-top: 10px;
   padding-bottom: 5px;
 }
 
@@ -186,7 +277,7 @@ textarea.form-control {
   top: 0;
   width: 100%;
   height: 100%;
-  /* overflow: auto; 스크롤 가능  */
+  overflow: auto; /* 스크롤 가능 */
 
   background-color: rgba(0, 0, 0, 0.4);
   margin-top: 0;
@@ -200,7 +291,7 @@ textarea.form-control {
   background-color: hsl(155, 37%, 76%);
   box-shadow: 0 2px 7px rgba(63, 63, 63, 0.3);
 
-  margin: 10% auto;
+  margin: 15% auto;
 
   border-radius: 40px 40px 40px 40px;
 }
@@ -238,7 +329,82 @@ textarea.form-control {
   font-size: xx-large;
   font-weight: bolder;
 }
+
 /* ---------------------------------------------- 혜진 */
+
+/* 우리 */
+/* .card-img-top{
+  
+} */
+.header {
+  text-align: left;
+  height: 285px;
+}
+h1 {
+  font-weight: 800;
+  padding-top: 1.5rem;
+}
+.header_m {
+  margin: 0 auto;
+  width: 1150px;
+  padding-left: 1.2rem;
+}
+.header p {
+  width: 90%;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #5c5c5c;
+}
+.speakBtn {
+  background-color: white;
+}
+
+#cards-box {
+  position: relative;
+}
+.like {
+  position: absolute;
+  text-align: right;
+  left: -1rem;
+}
+.like1 {
+  position: absolute;
+  text-align: right;
+  left: 220px;
+}
+.like2 {
+  position: absolute;
+  text-align: right;
+  left: 485px;
+}
+.like3 {
+  position: absolute;
+  text-align: right;
+  right: 265px;
+}
+.like4 {
+  position: absolute;
+  text-align: right;
+  right: 0;
+}
+
+#result,
+#result1,
+#result2,
+#result3,
+#result4 {
+  text-align: right;
+  margin: -10px -5px 0 0;
+  font-weight: 600;
+}
+
+.heartBtn {
+  background-color: transparent;
+  border: none;
+}
+
 .modal {
   z-index: 1050 !important;
 }
