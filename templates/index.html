@@ -47,63 +47,243 @@
           <button id="speakBtn" class="speakBtn">💣 위험! 누르지 마세요</button>
       </div>
     </div>
-    <div class="mypost">
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="name" placeholder="url" />
-        <label for="floatingInput">닉네임</label>
-      </div>
-      <div class="form-floating mb-3">
-        <input
-          type="password"
-          class="form-control"
-          id="password"
-          maxlength="4"
-          placeholder="url"
-        />
-        <label for="floatingInput">비밀번호 4자리</label>
-      </div>
-      <div class="form-floating">
-        <textarea
-          class="form-control"
-          placeholder="Leave a comment here"
-          id="comment"
-          style="height: 100px"
-        ></textarea>
-        <label for="floatingTextarea2">응원 한마디!</label>
-      </div>
-      <button onclick="save_comment()" type="button" class="btn btn-dark">
-        응원 등록하기
-      </button>
-    </div>
-    <div class="mycards" id="comment-list"></div>
-    <div class="modal fade" id="DelModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-sm">
+  
+  <!-- -------------------------------------------------------- 혜진 -->
+  <div class="mycards">
+    <div class="row row-cols-1 row-cols-md-5 g-5" id="cards-box">
+
+      <!-- 첫 번째 Modal을 여는 클래스 -->
+      <div class="btn">
+        <img src="../static/img/jsh.png" class="card-img-top">
+        <p>
+          <h5 class="card-title">지설희</h5>
+        </div>
+        <div class="like">
+          <button class="heartBtn" onclick="addLike()">
+              💖</button>
+          <div id='result'>0</div>
+        </div>
+
+      <!-- 첫 번째 Modal 클래스 -->
+      <div class="modal">
+
+        <!-- 첫 번째 Modal의 내용 -->
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">게시물 삭제</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+          <div class="img-content">
+            <img src="../static/img/jsh.JPEG" class="img">
+            <div class="content">
+              <div class="name-link">
+                <tr>지설희</tr>
+                <A href="https://hamut.tistory.com/" target="balnk" title="블로그 링크"><IMG
+                    src="https://cdn.icon-icons.com/icons2/2161/PNG/512/interface_attachment_link_paperclip_hyperlink_icon_133006.png"
+                    , width="30" , height="30"> </A>
+              </div>
+              </br>
+              <p><span class="gray-text">NICKNAME</span> &nbsp;황비홍
+                <br><span class="gray-text">LOVES</span> &nbsp;보드게임, 고기
+                <br><span class="gray-text">HATES</span> &nbsp;미세먼지, 황사
+                <br><span class="gray-text">COMMENT</span> 멋있다 넌 내게 빠조!
+              </p>
+            </div>
           </div>
-          <div class="modal-body">
-            <input
-              class="modal-pw"
-              type="password"
-              placeholder="비밀번호를 입력해주세요"
-            />
+        </div>
+      </div>
+
+      <!-- 두 번째 Modal을 여는 클래스 -->
+      <div class="btn">
+        <img src="../static/img/pji.png" class="card-img-top">
+        <p>
+        <h5 class="card-title">박제이</h5>
+      </div>
+      <div class="like1">
+        <button class="heartBtn" onclick="addLike1()">
+            💖</button>
+        <div id='result1'>0</div>
+      </div>
+
+      <!-- 두 번째 Modal 클래스-->
+      <div class="modal">
+
+        <!-- 두 번째 Modal의 내용 -->
+        <div class="modal-content">
+          <div class="img-content">
+            <img src="../static/img/pji.JPEG" class="img">
+            <div class="content">
+              <div class="name-link">
+                <tr>박제이</tr>
+                <A href="https://github.com/jei1211" target="balnk" title="블로그 링크"><IMG
+                    src="https://cdn.icon-icons.com/icons2/2161/PNG/512/interface_attachment_link_paperclip_hyperlink_icon_133006.png"
+                    , width="30" , height="30"> </A>
+              </div>
+              </br>
+              <p><span class="gray-text">NICKNAME</span> &nbsp;집사
+                <br><span class="gray-text">LOVES</span> &nbsp;심야 라이딩, 고양이
+                <br><span class="gray-text">HATES</span> &nbsp;아침..
+                <br><span class="gray-text">COMMENT</span> &nbsp;내배캠 6기 화이팅!
+              </p>
+            </div>
           </div>
-          <div class="modal-footer">
-            <button id="del-btn">확인</button>
+        </div>
+      </div>
+
+      <!-- 세 번째 Modal을 여는 클래스 -->
+      <div class="btn">
+        <img src="../static/img/jhj.png" class="card-img-top">
+        <p>
+        <h5 class="card-title">장혜진</h5>
+      </div>
+      <div class="like2">
+        <button class="heartBtn" onclick="addLike2()">
+            💖</button>
+        <div id='result2'>0</div>
+      </div>
+
+      <!-- 세 번째 Modal 클래스-->
+      <div class="modal">
+
+        <!-- 세 번째 Modal의 내용 -->
+        <div class="modal-content">
+          <div class="img-content">
+            <img src="../static/img/jhj.JPEG" class="img">
+            <div class="content">
+              <div class="name-link">
+                <tr>장혜진</tr>
+                <A href="https://velog.io/@hhjj0513" target="balnk" title="블로그 링크"><IMG
+                    src="https://cdn.icon-icons.com/icons2/2161/PNG/512/interface_attachment_link_paperclip_hyperlink_icon_133006.png"
+                    , width="30" , height="30"> </A>
+              </div>
+              </br>
+              <p><span class="gray-text">NICKNAME</span> &nbsp;마늘
+                <br><span class="gray-text">LOVES</span> &nbsp;재밌는 거 
+                <br><span class="gray-text">HATES</span> &nbsp;벌레
+                <br><span class="gray-text">COMMENT</span> &nbsp;功夫不负有心人
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 네 번째 Modal을 여는 클래스 -->
+      <div class="btn">
+        <img src="../static/img/kyb.png" class="card-img-top">
+        <p>
+        <h5 class="card-title">김영빈</h5>
+      </div>
+      <div class="like3">
+        <button class="heartBtn" onclick="addLike3()">
+            💖</button>
+        <div id='result3'>0</div>
+      </div>
+
+      <!-- 네 번째 Modal 클래스-->
+      <div class="modal">
+
+        <!-- 네 번째 Modal의 내용 -->
+        <div class="modal-content">
+          <div class="img-content">
+            <img src="../static/img/kyb.JPEG" class="img">
+            <div class="content">
+              <div class="name-link">
+                <tr>김영빈</tr>
+                <A href="https://space-zerobeen.tistory.com/" target="balnk" title="블로그 링크"><IMG
+                    src="https://cdn.icon-icons.com/icons2/2161/PNG/512/interface_attachment_link_paperclip_hyperlink_icon_133006.png"
+                    , width="30" , height="30"> </A>
+              </div>
+              </br>
+              <p><span class="gray-text">NICKNAME</span> &nbsp;<span style="font-size: 18px;">돈가스</span>
+                <br><span class="gray-text">LOVES</span> <span style="font-size: 17px;">멍때리기, 유튜브 감상, 산책</span>
+                <br><span class="gray-text">HATES</span> &nbsp;<span style="font-size: 18px;">벌레, 여름</span>
+                <br><span class="gray-text">COMMENT</span> <span style="font-size: 18px;">프론트엔드로 강해질 예정</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 다섯 번째 Modal을 여는 클래스 -->
+      <div class="btn">
+        <img src="../static/img/kwr.png" class="card-img-top">
+        <p>
+        <h5 class="card-title">김우리</h5>
+      </div>
+      <div class="like4">
+        <button class="heartBtn" onclick="addLike4()">
+            💖</button>
+        <div id='result4'>0</div>
+      </div>
+
+      <!-- 다섯 번째 Modal 클래스-->
+      <div class="modal">
+
+        <!-- 다섯 번째 Modal의 내용 -->
+        <div class="modal-content">
+          <div class="img-content">
+            <img src="../static/img/kwr.JPEG" class="img">
+            <div class="content">
+              <div class="name-link">
+                <tr>김우리</tr>
+                <A href="https://dlsltlvmfl9.tistory.com/" target="balnk" title="블로그 링크"><IMG
+                    src="https://cdn.icon-icons.com/icons2/2161/PNG/512/interface_attachment_link_paperclip_hyperlink_icon_133006.png"
+                    , width="30" , height="30"> </A>
+              </div>
+              </br>
+              <p><span class="gray-text">NICKNAME</span> &nbsp;기묵직
+                <br><span class="gray-text">LOVES</span> &nbsp;러닝, 축구시청
+                <br><span class="gray-text">HATES</span> &nbsp;none;
+                <br><span class="gray-text">COMMENT</span> &nbsp;no pain no gain
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <footer id="quote" class="quote">
-      <span></span>
-      <span></span>
-    </footer>
-  </body>
+  </div>
+  <!-- ------------------------------------------------------------ 혜진 -->
+  <div class="mypost">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="name" placeholder="url" />
+      <label for="floatingInput">닉네임</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="password" maxlength="4" placeholder="url" />
+      <label for="floatingInput">비밀번호 4자리</label>
+    </div>
+    <div class="form-floating">
+      <textarea class="form-control" placeholder="Leave a comment here" id="comment" style="height: 100px"></textarea>
+      <label for="floatingTextarea2">응원 한마디!</label>
+    </div>
+    <button onclick="save_comment()" type="button" class="bt-dark">
+      응원 등록하기
+    </button>
+  </div>
+  <div class="mycards" id="comment-list"></div>
+  <!-- <------------------------제이--------------------- -->
+  <!-- 삭제 버튼 클리 시 팝업되는 모달창
+    부트스트랩 빈 모달창 사용,  input과 button 추가하여 비밀번호 입력창 생성
+    모달창 바깥 클릭 시 닫힘 -->
+  <div class="test">
+    <div class="modal fade" id="DelModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">게시물 삭제</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input class="modal-pw" type="password" placeholder="비밀번호를 입력해주세요" />
+        </div>
+        <div class="modal-footer">
+          <button id="del-btn">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- -------------------------제이--------------------------- -->
+  <footer id="quote" class="quote">
+    <span></span>
+    <span></span>
+  </footer>
+</body>
+
 </html>
