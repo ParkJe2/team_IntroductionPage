@@ -2,8 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
 * {
   font-family: 'Noto Sans KR', sans-serif;
+  
 }
 
+body {
+  background-color: rgba(195, 223, 252, 0.014);
+  background-image:
+    linear-gradient(90deg, rgba(165, 210, 255, 0.158) 30%, transparent 70%),
+    linear-gradient(rgba(165, 210, 255, 0.075) 10%, transparent 30%);
+  background-size: 20px 20px;
+}
 /*-------------------------------- 김영빈 CSS--------------------------------------------- */
 .mypost {
   width: 95%;
@@ -92,22 +100,12 @@ textarea.form-control {
   background-color: rgb(248, 248, 248);
 }
 .btn-dark {
+  width: 180px;
+  height: 40px;
   color: #fff;
   background-color: #212529;
   border-color: #212529;
-  font-size: 20px;
-}
-
-/* <-------------제이------------ */
-/* 아이콘 버튼 우측 정렬 */
-.icon-btn {
-  float: right;
-}
-
-/* 아이콘 색상 변경 및 커서 포인터 지정 */
-.icon-btn > a {
-  color: #000;
-  cursor: pointer;
+  font-size: 16px;
 }
 
 /* ---------------------------------------------------------------------- 김영빈  ---------- */
@@ -150,29 +148,35 @@ textarea.form-control {
 /* intro.js css */
 .header {
   position: relative;
-  width: 100%;
+  width: 900px;
   padding-bottom: 150px;
-
-  text-align: left;
+  margin: 0 auto;
   height: 285px;
+  
 }
-
+.header h1 {
+  font-weight: 800;
+  padding-top: 4.5rem;
+}
+h1 span{
+  width: 5px;
+}
 .header_m {
   margin: 0 auto;
-  width: 1150px;
-  padding-left: 1.2rem;
 }
 
 .header p {
-  position: absolute;
-  top: 40px;
-  left: 450px;
-  right: 70px;
-  text-align: justify;
+  margin: 0 auto;
+  color: #5c5c5c;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+  margin-left: 0.5rem;
+  padding-top: 0.8rem;
 }
 
 .header h1 {
-  position: absolute;
   left: 60px;
   top: 40px;
   font-size: 64px;
@@ -183,11 +187,12 @@ textarea.form-control {
 
 .speakBtn {
   position: absolute;
-  width: 130px;
-  height: 22px;
-  right: 570px;
+  width: 160px;
+  height: 30px;
+  top: 152px;
+  right: 450px;
   color: white;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
 
   background-color: rgb(255, 73, 73);
@@ -196,6 +201,7 @@ textarea.form-control {
   margin: 110px 0px;
   padding: 3px 5px;
   transition: 0.3s;
+  /* background-color: white; */
 }
 
 .speakBtn:hover {
@@ -206,13 +212,15 @@ textarea.form-control {
 
 /* footer.js css  */
 .quote {
+  margin: 0 auto;
   color: gray;
   font-weight: bold;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 8rem;
+  font-size: 20px;
 }
 
 .quote span:first-child {
@@ -259,6 +267,7 @@ textarea.form-control {
   border-radius: 70%;
   overflow: hidden;
   filter: drop-shadow(10px 10px 10px gray);
+  background-color: white;
 }
 
 /* 카드 이름 */
@@ -315,10 +324,13 @@ textarea.form-control {
   display: inline;
   text-align: left;
   font-size: larger;
-  margin-left: 40px;
-  margin-top: 55px;
+  margin-left: 23px;
+  margin-top: 48px;
+  line-height: 30px;
 }
-
+.content p {
+  margin-top: 0.6rem;
+}
 /* 모달창 내용 색 변경 */
 .gray-text {
   color: gray;
@@ -336,30 +348,6 @@ textarea.form-control {
 /* .card-img-top{
   
 } */
-.header {
-  text-align: left;
-  height: 285px;
-}
-h1 {
-  font-weight: 800;
-  padding-top: 1.5rem;
-}
-.header_m {
-  margin: 0 auto;
-  width: 1150px;
-  padding-left: 1.2rem;
-}
-.header p {
-  width: 90%;
-  font-size: 18px;
-  line-height: 30px;
-  margin-top: 1rem;
-  font-weight: 500;
-  color: #5c5c5c;
-}
-.speakBtn {
-  background-color: white;
-}
 
 #cards-box {
   position: relative;
@@ -367,27 +355,27 @@ h1 {
 .like {
   position: absolute;
   text-align: right;
-  left: -1rem;
+  left: 1rem;
 }
 .like1 {
   position: absolute;
   text-align: right;
-  left: 220px;
+  left: 185px;
 }
 .like2 {
   position: absolute;
   text-align: right;
-  left: 485px;
+  left: 350px;
 }
 .like3 {
   position: absolute;
   text-align: right;
-  right: 265px;
+  right: 155px;
 }
 .like4 {
   position: absolute;
   text-align: right;
-  right: 0;
+  right: -15px;
 }
 
 #result,
@@ -398,6 +386,33 @@ h1 {
   text-align: right;
   margin: -10px -5px 0 0;
   font-weight: 600;
+}
+.bgRight {
+  width: 800px;
+  height: 400px;
+  position: fixed;
+  right: -200px;
+  top: -150px;
+  z-index: -999;
+  background: rgba(0,0,0,0.05);
+  transform: rotate(135deg);
+  animation-name: bgColorChange;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  
+}
+.bgLeft {
+  width: 800px;
+  height: 400px;
+  position: fixed;
+  left: -300px;
+  bottom: -150px;
+  z-index: -999;
+  background: rgba(0,0,0,0.05);
+  transform: rotate(135deg);
+  animation-name: bgColorChange;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
 .heartBtn {
