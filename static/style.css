@@ -117,15 +117,59 @@
 
 /* intro.js css */
 .header {
-  background-color: powderblue;
+  position: relative;
+  width: 100%;
+  padding-bottom: 150px;
+
+  text-align: left;
+  height: 285px;
+}
+
+.header_m {
+  margin: 0 auto;
+  width: 1150px;
+  padding-left: 1.2rem;
+}
+
+.header p {
+  position: absolute;
+  top: 40px;
+  left: 450px;
+  right: 70px;
+  text-align: justify;
+}
+
+.header h1 {
+  position: absolute;
+  left: 60px;
+  top: 40px;
+  font-size: 64px;
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: -6px;
 }
 
 .speakBtn {
-  background-color: transparent;
-  border: 1px solid gainsboro;
+  position: absolute;
+  width: 130px;
+  height: 22px;
+  right: 570px;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+
+  background-color: rgb(255, 73, 73);
+  border: none;
   border-radius: 30px;
-  padding: 3px 10px;
-  color: tomato;
+  margin: 110px 0px;
+  padding: 3px 5px;
+  transition: 0.3s;
+}
+
+.speakBtn:hover {
+  background-color: rgba(255, 73, 73);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(255, 73, 73, 0.6);
 }
 
 /* footer.js css  */
@@ -140,6 +184,7 @@
 }
 
 .quote span:first-child {
+  padding-top: 10px;
   padding-bottom: 5px;
 }
 
