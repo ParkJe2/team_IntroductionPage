@@ -1,14 +1,16 @@
 /* 폰트 적용_J */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
 * {
-  font-family: 'Noto Sans KR', sans-serif;
-  
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 body {
   background-color: rgba(195, 223, 252, 0.014);
-  background-image:
-    linear-gradient(90deg, rgba(165, 210, 255, 0.158) 30%, transparent 70%),
+  background-image: linear-gradient(
+      90deg,
+      rgba(165, 210, 255, 0.158) 30%,
+      transparent 70%
+    ),
     linear-gradient(rgba(165, 210, 255, 0.075) 10%, transparent 30%);
   background-size: 20px 20px;
 }
@@ -46,25 +48,25 @@ textarea.form-control {
   min-height: calc(1.5em + (7.75rem + 2px));
 }
 
-.form-floating>.form-control:focus~label,
-.form-floating>.form-control:not(:placeholder-shown)~label,
-.form-floating>.form-select~label {
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
   opacity: 0;
 }
 
-.form-floating>.form-control:focus~label,
-.form-floating>.form-control:not(:placeholder-shown)~label,
-.form-floating>.form-select~label {
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
   opacity: 0;
 }
 
-.form-floating>.form-control:focus~label,
-.form-floating>.form-control:not(:placeholder-shown)~label,
-.form-floating>.form-select~label {
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
   opacity: 0;
 }
 
-.mypost>button {
+.mypost > button {
   display: block;
   margin: 30px auto 0px;
   background-color: rgb(96, 96, 96);
@@ -124,13 +126,14 @@ textarea.form-control {
 .icon-btn > a {
   color: #000;
   cursor: pointer;
+  padding-right: 10px;
 }
 
 /* 삭제 모달 크기, 배경색 설정 */
 .modal-header,
 .modal-body,
 .modal-footer {
-  width: 600px;
+  width: 350px;
   background-color: #fff;
 }
 
@@ -148,6 +151,12 @@ textarea.form-control {
   background-color: #000;
   color: #fff;
 }
+
+/* 데이터 여백 */
+.blockquote {
+  padding-left: 10px;
+}
+
 /* -------------제이------------> */
 
 /* intro.js css */
@@ -157,13 +166,12 @@ textarea.form-control {
   padding-bottom: 150px;
   margin: 0 auto;
   height: 285px;
-  
 }
 .header h1 {
   font-weight: 800;
   padding-top: 4.5rem;
 }
-h1 span{
+h1 span {
   width: 5px;
 }
 .header_m {
@@ -234,31 +242,6 @@ h1 span{
 }
 
 /* ---------------------------------------------- 혜진 */
-/* 타이틀 */
-.myback {
-  background-color: rgba(235, 235, 235, 0.618);
-
-  height: 200px;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-/* 조 이름 */
-.title {
-  font-size: 60px;
-  font-weight: bolder;
-
-  margin-right: 250px;
-}
-
-/* 미니 프로젝트 소개 */
-.desc {
-  font-size: 30px;
-}
-
 /* 카드 전체 */
 .mycards {
   margin: 50px auto 50px auto;
@@ -298,7 +281,7 @@ h1 span{
 }
 
 /* 모달창 */
-.modal-content {
+.modal-form {
   width: 600px;
   height: 300px;
 
@@ -399,12 +382,11 @@ h1 span{
   right: -200px;
   top: -150px;
   z-index: -999;
-  background: rgba(0,0,0,0.05);
+  background: rgba(0, 0, 0, 0.05);
   transform: rotate(135deg);
   animation-name: bgColorChange;
   animation-duration: 10s;
   animation-iteration-count: infinite;
-  
 }
 .bgLeft {
   width: 800px;
@@ -413,7 +395,7 @@ h1 span{
   left: -300px;
   bottom: -150px;
   z-index: -999;
-  background: rgba(0,0,0,0.05);
+  background: rgba(0, 0, 0, 0.05);
   transform: rotate(135deg);
   animation-name: bgColorChange;
   animation-duration: 10s;
