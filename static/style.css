@@ -128,7 +128,7 @@ textarea.form-control {
 .modal-header,
 .modal-body,
 .modal-footer {
-  width: 600px;
+  width: 350px;
   background-color: #fff;
 }
 
@@ -276,7 +276,7 @@ h1 span {
 }
 
 /* 모달창 */
-.modal-content {
+.modal-form {
   width: 600px;
   height: 300px;
 
