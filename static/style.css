@@ -110,7 +110,7 @@ textarea.form-control {
   font-size: 16px;
 }
 
-.card-body{
+.card-body {
   border-radius: 1rem;
   box-shadow: 8px 8px 18px 1px rgba(0, 0, 0, 0.349);
 }
@@ -152,9 +152,50 @@ textarea.form-control {
   color: #fff;
 }
 
-/* 데이터 여백 */
+/* 입력된 댓글 데이터 여백 설정 */
 .blockquote {
   padding-left: 10px;
+}
+
+/* --- 5/19 수정 추가 분 --- */
+/* 수정폼 가로정렬 */
+.editForm {
+  text-align: center;
+}
+
+/* 수정폼 응원 한마디 input 크기 및 모양 설정 */
+.commentForm {
+  width: 100%;
+  height: 43px;
+  border-radius: 10px;
+}
+
+/* 수정폼 닉네임 input 가로정렬, 위치 및 크기, 모양 설정 */
+.nameForm {
+  display: inline-block;
+  border-radius: 10px;
+  margin-left: -20px;
+  width: 40%;
+}
+
+/* 수정폼 비밀번호 input 가로정렬, 위치 및 크기, 모양 설정 */
+.pwForm {
+  display: inline-block;
+  border-radius: 10px;
+  margin-left: 10px;
+  width: 40%;
+}
+
+/* 수정폼 버튼 크기, 색상, 모양 설정   */
+.edit-btn {
+  width: 15%;
+  height: 35px;
+  color: #fff;
+  margin-left: 10px;
+  background-color: rgb(96, 96, 96);
+  border-color: #212529;
+  border-radius: 15px;
+  font-size: 15px;
 }
 
 /* -------------제이------------> */
