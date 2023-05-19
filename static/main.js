@@ -203,7 +203,7 @@ window.onclick = function (event) {
 };
 // ------------------------------------------------ 혜진
 
-// 우리
+// 우리 주석//
 function addLike() {
   countA = countA + 1;
   document.querySelector("#result").innerHTML = +countA;
