@@ -165,7 +165,7 @@ textarea.form-control {
 
 /* 수정폼 응원 한마디 input 크기 및 모양 설정 */
 .commentForm {
-  width: 90%;
+  width: 100%;
   height: 43px;
   border-radius: 10px;
 }
@@ -174,8 +174,8 @@ textarea.form-control {
 .nameForm {
   display: inline-block;
   border-radius: 10px;
-  margin-left: -36px;
-  width: 300px;
+  margin-left: -20px;
+  width: 40%;
 }
 
 /* 수정폼 비밀번호 input 가로정렬, 위치 및 크기, 모양 설정 */
@@ -183,12 +183,12 @@ textarea.form-control {
   display: inline-block;
   border-radius: 10px;
   margin-left: 10px;
-  width: 300px;
+  width: 40%;
 }
 
 /* 수정폼 버튼 크기, 색상, 모양 설정   */
 .edit-btn {
-  width: 80px;
+  width: 15%;
   height: 35px;
   color: #fff;
   margin-left: 10px;

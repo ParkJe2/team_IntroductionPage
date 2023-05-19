@@ -112,6 +112,9 @@ function editEvents(id) {
   const name = $(`#${id} > div > blockquote > footer`).text();
   // 위 경로에 있는 텍스트를 가져온다.
 
+  $(`#${id} > div > div`).hide();
+  // 위 경로에 있는 div를 숨긴다.
+
   $(`#${id} > div > blockquote > footer`).attr("class", "blockquote");
   // 위 경로에 있는 클래스 네임을 "blockquote"로 바꿔준다 (.attr()사용, 닉네임 앞에 "-"를 지우기 위해)
 
